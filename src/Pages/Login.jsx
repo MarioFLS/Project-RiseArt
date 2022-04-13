@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import saveUser from '../service/saveStorage';
 
 function Login() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const history = useHistory();
-  console.log(name);
 
   const verifyUser = () => {
-    const validateEmail = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i;
-    if (validateEmail.test(email) && password.length > 5) {
+    const validateEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!validateEmail.test(email) || password.length <= 5 || name.length <= 2) {
       return true;
     }
   };
   const handleClickLogin = (event) => {
     event.preventDefault();
+    saveUser(name, email);
     history.push('/home');
   };
   return (
@@ -39,7 +40,7 @@ function Login() {
         />
         <button
           type="submit"
-          disabled={verifyUser}
+          disabled={verifyUser()}
           onClick={handleClickLogin}
         >
           Login
