@@ -7,7 +7,7 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
-    'eslint:recommended',
+    'plugin:testing-library/react',
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -17,11 +17,16 @@ module.exports = {
   },
   plugins: [
     'react',
+    'testing-library',
   ],
   rules: {
     'max-len': ['error', { code: 90, ignoreUrls: true, ignoreComments: true }],
     'no-unreachable': 'error',
     'no-else-return': 'error',
     'consistent-return': ['off', { treatUndefinedAsUnspecified: true }],
+    'testing-library/await-async-query': 'warn',
+    'testing-library/no-await-sync-query': 'warn',
+    'testing-library/no-debugging-utils': 'warn',
+    'testing-library/no-dom-import': 'warn',
   },
 };

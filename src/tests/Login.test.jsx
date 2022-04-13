@@ -1,13 +1,14 @@
+/* eslint-disable no-undef */
 import React from 'react';
-/* import { screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event'; */
+import { screen } from '@testing-library/react';
+/* import userEvent from '@testing-library/user-event'; */
 import renderWithRouter from './renderWithRouter';
 import App from '../App';
 
-describe('Testes da página de Login', () => {
-  it('Texto com a escrita "Login" está presente na tela', () => {
+describe('Teste Página de Login', () => {
+  it('Texto Login Estar Presente na tela', () => {
     renderWithRouter(<App />);
-    const textLogin = getByRole('heading', { name: /Login/, level: 2 });
+    const textLogin = screen.getByRole('heading', { level: 2, name: /Login/ });
     expect(textLogin).toBeInTheDocument();
   });
 });

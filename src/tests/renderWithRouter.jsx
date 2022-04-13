@@ -5,8 +5,8 @@ import { createMemoryHistory } from 'history';
 
 function renderWithRouter(componentToRender) {
   const customHistory = createMemoryHistory();
-
-  const returnFromRender = render(
+  const view = render;
+  const returnFromRender = view(
     <Router history={customHistory}>
       {componentToRender}
     </Router>,
