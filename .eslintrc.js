@@ -21,5 +21,7 @@ module.exports = {
   rules: {
     'max-len': ['error', { code: 90, ignoreUrls: true, ignoreComments: true }],
     'no-unreachable': 'error',
+    'no-else-return': 'error',
+    'consistent-return': ['off', { treatUndefinedAsUnspecified: true }],
   },
 };

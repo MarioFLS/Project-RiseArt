@@ -6,9 +6,13 @@ function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const history = useHistory();
+  console.log(name);
 
   const verifyUser = () => {
-
+    const validateEmail = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i;
+    if (validateEmail.test(email) && password.length > 5) {
+      return true;
+    }
   };
   const handleClickLogin = (event) => {
     event.preventDefault();
@@ -33,7 +37,14 @@ function Login() {
           placeholder="Digite sua senha"
           onChange={({ target }) => setPassword(target.value)}
         />
-        <button type="submit" onClick={handleClickLogin}>Login</button>
+        <button
+          type="submit"
+          disabled={verifyUser}
+          onClick={handleClickLogin}
+        >
+          Login
+
+        </button>
       </form>
     </main>
   );
