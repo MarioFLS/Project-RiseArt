@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import ArtContext from './ArtContext';
 
 function ArtProvider({ children }) {
-  const context = {};
+  const context = useMemo(() => ({}), []);
+
   return (
-    <ArtProvider.Provider value={context}>
+    <ArtContext.Provider value={context}>
       {children}
-    </ArtProvider.Provider>
+    </ArtContext.Provider>
   );
 }
 
