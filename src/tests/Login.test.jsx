@@ -11,4 +11,14 @@ describe('Teste Página de Login', () => {
     const textLogin = screen.getByRole('heading', { level: 2, name: /Login/ });
     expect(textLogin).toBeInTheDocument();
   });
+
+  it('Input de name, email e senha estão presentes', () => {
+    renderWithRouter(<App />);
+    const inputName = screen.getByPlaceholderText('Digite seu Nome');
+    const inputEmail = screen.getByPlaceholderText('Digite seu Email');
+    const inputPassword = screen.getByPlaceholderText('Digite sua senha');
+    expect(inputName).toBeInTheDocument();
+    expect(inputEmail).toBeInTheDocument();
+    expect(inputPassword).toBeInTheDocument();
+  });
 });
