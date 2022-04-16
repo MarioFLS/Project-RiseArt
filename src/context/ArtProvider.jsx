@@ -1,10 +1,11 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import PropTypes from 'prop-types';
 import ArtContext from './ArtContext';
 import gallery from '../gallery';
 
 function ArtProvider({ children }) {
-  const context = useMemo(() => ({ gallery }), []);
+  const [galleryObj, setGalleryObj] = useState(gallery);
+  const context = useMemo(() => ({ gallery, galleryObj, setGalleryObj }), []);
 
   return (
     <ArtContext.Provider value={context}>
