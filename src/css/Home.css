@@ -1,0 +1,23 @@
+.main-container {
+  background-color: blueviolet;
+}
+
+.cards-container {
+  width: 60%;
+  background-color: aquamarine;
+  margin: 0 auto;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.cards {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+}
+.card-image {
+  height: 50vh;
+  object-fit: cover;
+}
