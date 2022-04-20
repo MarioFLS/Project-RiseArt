@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { saveArt } from '../service/saveStorage';
+import '../css/Header.css';
 
 function Header({ gallery, setGallery }) {
   const addArt = (event) => {
     event.preventDefault();
-    const imageFile = event.target.parentNode.firstChild.files[0];
+    const imageFile = event.target.files[0];
     const reader = new FileReader();
     reader.onload = () => {
       if (reader.readyState === 2) {
@@ -15,7 +16,7 @@ function Header({ gallery, setGallery }) {
       }
     };
     reader.readAsDataURL(imageFile);
-    const valueInput = event.target.parentNode.firstChild;
+    const valueInput = event.target.value;
     valueInput.value = null;
   };
   return (
