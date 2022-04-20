@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import ListGallery from '../Components/ListGallery';
 import ArtContext from '../context/ArtContext';
 import '../css/Home.css';
 import { saveArt } from '../service/saveStorage';
@@ -49,18 +50,7 @@ function Home() {
         <button type="submit" onClick={addArt}>Enviar</button>
       </form>
 
-      <div className="cards-main-container">
-        {galleryonScreen.map((item, index) => (
-          <div key={item[itemArr(index)].id} className="cards-container">
-            {item
-              .map(({ id, image }) => (
-                <div key={id} className="card-image">
-                  <img src={image} alt="a" />
-                </div>
-              )).reverse()}
-          </div>
-        ))}
-      </div>
+      <ListGallery onScreen={galleryonScreen} />
     </main>
   );
 }
