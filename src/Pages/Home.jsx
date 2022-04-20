@@ -45,10 +45,18 @@ function Home() {
   return (
     <main className="main-container">
       <h1>Home</h1>
-      <form>
-        <input type="file" accept="image/png, image/jpeg" onSubmit={addArt} />
-        <button type="submit" onClick={addArt}>Enviar</button>
-      </form>
+      <div className="send-img">
+        <label htmlFor="upload-img" className="label-send-img">
+          <input
+            type="file"
+            id="upload-img"
+            accept="image/png, image/jpeg"
+            onChange={addArt}
+          />
+          <i className="large material-icons">add_a_photo</i>
+          <p>Enviar</p>
+        </label>
+      </div>
 
       <ListGallery onScreen={galleryonScreen} />
     </main>
