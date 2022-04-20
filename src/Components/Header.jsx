@@ -16,8 +16,6 @@ function Header({ gallery, setGallery }) {
       }
     };
     reader.readAsDataURL(imageFile);
-    const valueInput = event.target.value;
-    valueInput.value = null;
   };
   return (
     <header>
