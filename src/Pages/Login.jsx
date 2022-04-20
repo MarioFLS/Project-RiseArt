@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
-import saveUser from '../service/saveStorage';
+import { saveUser } from '../service/saveStorage';
 
 function Login() {
   const [name, setName] = useState('');

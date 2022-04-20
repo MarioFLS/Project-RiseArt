@@ -41,13 +41,6 @@ const gallery = [
     type: 'cartoon',
     curtidas: 0,
   },
-  {
-    id: 6,
-    name: 'Bob Esponja',
-    image: 'https://img.elo7.com.br/product/zoom/319792B/painel-de-festa-bob-esponja-festa-infantil.jpg',
-    type: 'cartoon',
-    curtidas: 0,
-  },
 ];
 
 export default gallery;
