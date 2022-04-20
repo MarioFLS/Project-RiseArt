@@ -38,6 +38,8 @@ function Home() {
       }
     };
     reader.readAsDataURL(imageFile);
+    const valueInput = event.target.parentNode.firstChild;
+    valueInput.value = null;
   };
   return (
     <main className="main-container">
@@ -47,13 +49,13 @@ function Home() {
         <button type="submit" onClick={addArt}>Enviar</button>
       </form>
 
-      <div className="cards-container">
+      <div className="cards-main-container">
         {galleryonScreen.map((item, index) => (
-          <div key={item[itemArr(index)].id}>
+          <div key={item[itemArr(index)].id} className="cards-container">
             {item
               .map(({ id, image }) => (
-                <div key={id}>
-                  <img height="200px" src={image} alt="a" />
+                <div key={id} className="card-image">
+                  <img src={image} alt="a" />
                 </div>
               )).reverse()}
           </div>
