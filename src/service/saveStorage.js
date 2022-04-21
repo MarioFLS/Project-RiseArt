@@ -8,6 +8,7 @@ export const saveUser = (name, email, imgProfile = imageUser) => {
       imgProfile,
     }));
   }
+
   localStorage.setItem('user', JSON.stringify({
     name,
     email,
