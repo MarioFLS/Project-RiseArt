@@ -8,9 +8,9 @@ function ListGallery({ onScreen }) {
       {onScreen.map((item, index) => (
         <div key={item[itemArr(index)].id} className="cards-container">
           {item
-            .map(({ id, image }) => (
+            .map(({ id, image, name }) => (
               <div key={id} className="card-image">
-                <img src={image} alt="a" />
+                <img src={image} alt={`Imagem de ${name}`} />
               </div>
             )).reverse()}
         </div>
