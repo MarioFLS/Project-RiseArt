@@ -34,6 +34,11 @@ header {
   border-radius: 8px;
   cursor: pointer;
 }
+.label-send-img:hover {
+  background: rgb(13, 77, 4);
+  background: linear-gradient(228deg, rgb(80, 175, 67) 60%, rgb(41, 145, 51) 80%, rgb(47, 156, 41) 100%);
+
+}
 
 .label-send-img > p{
   font-size: 1.5em;
