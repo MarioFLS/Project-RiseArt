@@ -1,0 +1,56 @@
+header {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.856);
+  height: 11.5vh;
+}
+
+#logotipo {
+  width: 70px;
+  margin-top: 0.2%;
+  margin-left: 20%;
+  cursor: pointer;
+}
+
+#upload-img {
+  display: none;
+}
+
+.send-img {
+  display: flex;
+}
+
+.label-send-img {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 20px;
+  background: rgb(19,99,7);
+  background: linear-gradient(228deg, rgb(109, 211, 93) 0%, rgba(35,168,48,1) 64%, rgb(47, 156, 41) 100%);
+  width: 8em;
+  height: 3em;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.label-send-img:hover {
+  background: rgb(13, 77, 4);
+  background: linear-gradient(228deg, rgb(80, 175, 67) 60%, rgb(41, 145, 51) 80%, rgb(47, 156, 41) 100%);
+
+}
+
+.label-send-img > p{
+  font-size: 1.5em;
+}
+
+.btn-send {
+  background-color: green;
+  background-image: linear-gradient();
+  border: none;
+}
+
+.material-icons {
+  color: white;
+  font-size: 2em;
+}
