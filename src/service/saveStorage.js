@@ -1,5 +1,11 @@
+import imageUser from '../image/imageUser.webp';
+
 export const saveUser = (name, email) => {
-  localStorage.setItem('user', JSON.stringify({ name, email }));
+  localStorage.setItem('user', JSON.stringify({
+    name,
+    email,
+    imgProfile: imageUser,
+  }));
 };
 
 export const saveArt = (id, image) => {

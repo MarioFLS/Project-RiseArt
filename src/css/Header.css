@@ -37,7 +37,6 @@ header {
 .label-send-img:hover {
   background: rgb(13, 77, 4);
   background: linear-gradient(228deg, rgb(80, 175, 67) 60%, rgb(41, 145, 51) 80%, rgb(47, 156, 41) 100%);
-
 }
 
 .label-send-img > p{
@@ -53,4 +52,11 @@ header {
 .material-icons {
   color: white;
   font-size: 2em;
+}
+
+#image-user {
+  border: solid 2px rgb(21, 95, 12);
+  width: 3em;
+  border-radius: 10px;
+  margin-right: 20px;
 }

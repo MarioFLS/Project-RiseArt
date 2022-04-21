@@ -6,6 +6,7 @@ import icon from '../image/icon.png';
 import '../css/Header.css';
 
 function Header({ gallery, setGallery }) {
+  const getUser = JSON.parse(localStorage.getItem('user'));
   const addArt = (event) => {
     event.preventDefault();
     const imageFile = event.target.files[0];
@@ -26,7 +27,13 @@ function Header({ gallery, setGallery }) {
       </Link>
 
       <div className="send-img">
-        <button type="button">Perfil do Usuario</button>
+        <Link to="/profile">
+          <img
+            id="image-user"
+            src={getUser.imgProfile || ''}
+            alt="Imagem do usuário, leva a tela de pergil"
+          />
+        </Link>
         <label htmlFor="upload-img" className="label-send-img">
           <input
             type="file"
