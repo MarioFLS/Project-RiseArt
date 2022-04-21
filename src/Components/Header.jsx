@@ -42,7 +42,7 @@ function Header({ gallery, setGallery }) {
         <Link to="/profile">
           <img
             id="image-user"
-            src={getUser.imgProfile || ''}
+            src={getUser.imgProfile}
             alt="Imagem do usuário, leva a tela de pergil"
           />
         </Link>
