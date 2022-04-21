@@ -1,5 +1,5 @@
 .cards-main-container {
-  width: 60%;
+  width: 80%;
   background-color: rgba(8, 8, 8, 0.795);
   margin: 0 auto;
   align-items: center;
@@ -9,14 +9,15 @@
 }
 
 .cards-container {
+  box-sizing: content-box;
   display: flex;
   width: 100%;
   gap: 0.5%;
   justify-content: space-between;
-  overflow: hidden;
 }
-.cards {
+.card-image {
   display: flex;
+  min-width: 33%;
   flex-direction: column;
 }
 .card-image > img {
@@ -25,3 +26,9 @@
   height: calc(180px * 3 + 10px * 6);
 }
 
+#Title-page {
+  text-align: center;
+  user-select: none;
+  font-size: 4em;
+  margin: 20px 0;
+}

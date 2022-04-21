@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { saveArt } from '../service/saveStorage';
+import icon from '../image/icon.png';
 import '../css/Header.css';
 
 function Header({ gallery, setGallery }) {
@@ -19,8 +21,12 @@ function Header({ gallery, setGallery }) {
   };
   return (
     <header>
-      <h1>Nome Do Item</h1>
+      <Link to="/home">
+        <img src={icon} alt="Icone da Marca" id="logotipo" />
+      </Link>
+
       <div className="send-img">
+        <button type="button">Perfil do Usuario</button>
         <label htmlFor="upload-img" className="label-send-img">
           <input
             type="file"
