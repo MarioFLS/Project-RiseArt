@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# Project-RiseArt
+O RiseArt simula internamente de forma simplificada um site de trabalhos artísticos ou imagens do seu gosto. Em que você pode fazer upload dos seus próprios trabalhos!
+>>>>>>> 604977a5c6c00fe048fbc1ccde248529ec3ebd14
