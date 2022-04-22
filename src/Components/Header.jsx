@@ -3,6 +3,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { saveArt } from '../service/saveStorage';
 import icon from '../image/icon.png';
+import github from '../image/github.svg';
+import linkedin from '../image/linkedin.svg';
 import '../css/Header.css';
 
 function Header({ gallery, setGallery }) {
@@ -22,10 +24,21 @@ function Header({ gallery, setGallery }) {
     reader.readAsDataURL(imageFile);
   };
   return (
-    <header>
-      <Link to="/home">
-        <img src={icon} alt="Icone da Marca" id="logotipo" />
-      </Link>
+    <header className="header-container">
+      <div className="logo-container">
+        <Link to="/home">
+          <img src={icon} alt="Icone da Marca" id="logotipo" />
+        </Link>
+      </div>
+
+      <div id="contact">
+        <a href="https://github.com/MarioFLS" target="_blank" rel="noopener noreferrer">
+          <img src={github} alt="" />
+        </a>
+        <a href="https://www.linkedin.com/in/mario-fernando-lacerda/" target="_blank" rel="noopener noreferrer">
+          <img src={linkedin} alt="" />
+        </a>
+      </div>
 
       <div className="send-img">
         <Link to="/profile">

@@ -29,11 +29,13 @@ function Home() {
   }, [setGalleryonScreen, gallery, setGallery, inputFilter]);
 
   return (
-    <main className="main-container">
+    <>
       <Header gallery={gallery} setGallery={setGallery} />
-      <h1 id="Title-page">Home</h1>
-      <ListGallery onScreen={galleryonScreen} />
-    </main>
+      <main className="main-container">
+        <h1 id="Title-page">Home</h1>
+        <ListGallery onScreen={galleryonScreen} />
+      </main>
+    </>
   );
 }
 
