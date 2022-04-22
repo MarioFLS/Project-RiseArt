@@ -20,7 +20,9 @@ function Home() {
 
   useEffect(() => {
     const galleryArr = [];
-    gallery.filter(({ name }) => name.toLowerCase().includes(inputFilter.toLowerCase()))
+    gallery
+      .filter(({ name }) => name.toLowerCase()
+        .includes(inputFilter.toLowerCase()))
       .forEach((galleryItens, index) => {
         if (index % 3 === 0) { galleryArr.push([]); }
         galleryArr[itemArr(index)] = [...galleryArr[itemArr(index)], galleryItens];

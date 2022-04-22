@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import { saveUser } from '../service/saveStorage';
+import '../css/Login.css';
 
 function Login() {
   const [name, setName] = useState('');
@@ -20,25 +21,29 @@ function Login() {
     history.push('/home');
   };
   return (
-    <main>
-      <form>
+    <main className="main-login">
+      <form className="form-login">
         <h2>Login</h2>
-        <input
-          type="text"
-          placeholder="Digite seu Nome"
-          onChange={({ target }) => setName(target.value)}
-        />
-        <input
-          type="text"
-          placeholder="Digite seu Email"
-          onChange={({ target }) => setEmail(target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Digite sua senha"
-          onChange={({ target }) => setPassword(target.value)}
-        />
+        <div className="container-inputs">
+          <input
+            type="text"
+            placeholder="Digite seu Nome"
+            onChange={({ target }) => setName(target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Digite seu Email"
+            onChange={({ target }) => setEmail(target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Digite sua senha"
+            onChange={({ target }) => setPassword(target.value)}
+          />
+        </div>
+
         <button
+          id="btn-login"
           type="submit"
           disabled={verifyUser()}
           onClick={handleClickLogin}
