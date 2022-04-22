@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import { saveUser } from '../service/saveStorage';
+import icon from '../image/icon.png';
 import '../css/Login.css';
 
 function Login() {
@@ -23,7 +24,7 @@ function Login() {
   return (
     <main className="main-login">
       <form className="form-login">
-        <h2>Login</h2>
+        <img className="icon-login" src={icon} alt="Icone do Site" />
         <div className="container-inputs">
           <input
             type="text"

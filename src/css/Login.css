@@ -18,11 +18,9 @@
   width: 40vw;
 }
 
-.form-login > h2 {
+.icon-login {
   user-select: none;
-  font-size: 5em;
-  text-transform: uppercase;
-  font-weight: bold;
+  width: 22%;
 }
 
 .container-inputs {
