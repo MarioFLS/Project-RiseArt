@@ -4,12 +4,14 @@ import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import renderWithRouter from './renderWithRouter';
 import App from '../App';
+import icon from '../image/icon.png';
 
 describe('Teste Página de Login', () => {
-  it('Texto Login Estar Presente na tela', () => {
+  it('Logo Esta Presente na tela', () => {
     renderWithRouter(<App />);
-    const textLogin = screen.getByRole('heading', { level: 2, name: /Login/ });
-    expect(textLogin).toBeInTheDocument();
+    const logoImage = screen.getByRole('img', { name: 'Icone do Site' });
+    expect(logoImage).toBeInTheDocument();
+    expect(logoImage.src).toBe(`http://localhost/${icon}`);
   });
 
   it('Input de name, email e senha estão presentes', () => {
@@ -25,7 +27,8 @@ describe('Teste Página de Login', () => {
   it('Se o botão de Login Redireciona para página Home', () => {
     const { history } = renderWithRouter(<App />);
     const name = 'Usuário';
-    const email = 'email@teste.com';
+    const inValidEmail = 'email-teste.com';
+    const validEmail = 'email@teste.com';
     const password = '123456';
 
     const inputName = screen.getByPlaceholderText('Digite seu Nome');
@@ -37,9 +40,12 @@ describe('Teste Página de Login', () => {
     expect(buttonLogin).toBeDisabled();
 
     userEvent.type(inputName, name);
-    userEvent.type(inputEmail, email);
+    userEvent.type(inputEmail, inValidEmail);
     userEvent.type(inputPassword, password);
 
+    expect(buttonLogin).toBeDisabled();
+
+    userEvent.type(inputEmail, validEmail);
     expect(buttonLogin).not.toBeDisabled();
 
     userEvent.click(buttonLogin);
