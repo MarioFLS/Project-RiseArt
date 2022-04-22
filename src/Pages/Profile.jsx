@@ -3,7 +3,7 @@ import { saveUser } from '../service/saveStorage';
 import ProfileEdit from '../Components/ProfileEdit';
 import ProfileView from '../Components/ProfileView';
 import '../css/Profile.css';
-import Header from '../Components/Header';
+import HeaderProfile from '../Components/HeaderProfile';
 
 function Profile() {
   const getUser = JSON.parse(localStorage.getItem('user'));
@@ -28,7 +28,7 @@ function Profile() {
 
   return (
     <>
-      <Header gallery={[]} setGallery={() => null} />
+      <HeaderProfile gallery={[]} setGallery={() => null} isHome={false} />
       <main className="main-profile">
         <div className="container-profile">
           {isEdit

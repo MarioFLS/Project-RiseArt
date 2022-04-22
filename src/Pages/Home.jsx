@@ -21,8 +21,6 @@ function Home() {
   useEffect(() => {
     const galleryArr = [];
     gallery
-      .filter(({ name }) => name
-        .includes(inputFilter))
       .forEach((galleryItens, index) => {
         if (index % 3 === 0) { galleryArr.push([]); }
         galleryArr[itemArr(index)] = [...galleryArr[itemArr(index)], galleryItens];

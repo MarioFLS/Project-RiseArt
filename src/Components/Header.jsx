@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { useContext } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import ArtContext from '../context/ArtContext';
 import { saveArt } from '../service/saveStorage';
 import icon from '../image/icon.png';
@@ -9,7 +9,6 @@ import '../css/Header.css';
 function Header({ gallery, setGallery }) {
   const getUser = JSON.parse(localStorage.getItem('user'));
   const { setInputFilter, inputFilter } = useContext(ArtContext);
-  const { location: { pathname } } = useHistory();
 
   const addArt = (event) => {
     event.preventDefault();
@@ -30,7 +29,6 @@ function Header({ gallery, setGallery }) {
         <img src={icon} alt="Icone da Marca" id="logotipo" />
       </Link>
 
-      {pathname === '/home' && (
       <label htmlFor="filter-arts" id="label-filter">
         <i className="material-icons">search</i>
         <input
@@ -40,7 +38,6 @@ function Header({ gallery, setGallery }) {
           value={inputFilter}
         />
       </label>
-      )}
 
       <div className="send-img">
         <Link to="/profile">
@@ -51,9 +48,9 @@ function Header({ gallery, setGallery }) {
           />
         </Link>
 
-        {pathname === '/home' && (
         <label htmlFor="upload-img" className="label-send-img">
           <input
+            data-testid="label-send"
             type="file"
             id="upload-img"
             accept="image/png, image/jpeg"
@@ -62,14 +59,14 @@ function Header({ gallery, setGallery }) {
           <i className="large material-icons">add_a_photo</i>
           <p>Enviar</p>
         </label>
-        )}
+
       </div>
     </header>
   );
 }
 
 Header.propTypes = {
-  gallery: PropTypes.arrayOf(PropTypes.objectOf).isRequired,
+  gallery: PropTypes.arrayOf(PropTypes.objectOf()).isRequired,
   setGallery: PropTypes.func.isRequired,
 };
 
