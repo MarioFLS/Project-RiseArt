@@ -6,11 +6,22 @@ function ListGallery({ onScreen }) {
   return (
     <div className="cards-main-container">
       {onScreen.map((item, index) => (
-        <div key={item[itemArr(index)].id} className="cards-container">
+        <div
+          key={item[itemArr(index)].id}
+          className="cards-container"
+        >
           {item
-            .map(({ id, image }) => (
-              <div key={id} className="card-image">
-                <img src={image} alt="a" />
+            .map(({ id, image, name }, indexImg) => (
+              <div
+                data-testid="div-cards"
+                key={id}
+                className="card-image"
+              >
+                <img
+                  src={image}
+                  data-testid={`images-${indexImg}`}
+                  alt={`Imagem de ${name}`}
+                />
               </div>
             )).reverse()}
         </div>

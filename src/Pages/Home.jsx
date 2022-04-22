@@ -5,7 +5,7 @@ import ArtContext from '../context/ArtContext';
 import '../css/Home.css';
 
 function Home() {
-  const { galleryObj } = useContext(ArtContext);
+  const { galleryObj, inputFilter } = useContext(ArtContext);
   const [galleryonScreen, setGalleryonScreen] = useState([]);
   const [gallery, setGallery] = useState(galleryObj);
 
@@ -20,19 +20,22 @@ function Home() {
 
   useEffect(() => {
     const galleryArr = [];
-    gallery.forEach((galleryItens, index) => {
-      if (index % 3 === 0) { galleryArr.push([]); }
-      galleryArr[itemArr(index)] = [...galleryArr[itemArr(index)], galleryItens];
-    });
+    gallery
+      .forEach((galleryItens, index) => {
+        if (index % 3 === 0) { galleryArr.push([]); }
+        galleryArr[itemArr(index)] = [...galleryArr[itemArr(index)], galleryItens];
+      });
     setGalleryonScreen(galleryArr.reverse());
-  }, [setGalleryonScreen, gallery, setGallery]);
+  }, [setGalleryonScreen, gallery, setGallery, inputFilter]);
 
   return (
-    <main className="main-container">
+    <>
       <Header gallery={gallery} setGallery={setGallery} />
-      <h1 id="Title-page">Home</h1>
-      <ListGallery onScreen={galleryonScreen} />
-    </main>
+      <main className="main-container">
+        <h1 id="Title-page">Home</h1>
+        <ListGallery onScreen={galleryonScreen} />
+      </main>
+    </>
   );
 }
 

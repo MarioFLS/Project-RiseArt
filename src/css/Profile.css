@@ -1,0 +1,71 @@
+.label-edit-profile {
+  cursor: pointer;
+}
+
+.main-profile {
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+  position: absolute;
+  top: 150px;
+}
+
+.container-profile > button {
+  margin-top: 20px;
+}
+
+.section-profile {
+  display: flex;
+  border-radius: 10%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: rgba(8, 8, 8, 0.795);
+  height: 70vh;
+  width: 32vw;
+}
+
+.section-profile > input {
+  border-radius: 10px;
+  width: 55%;
+  height: 60px;
+  font-size: 1.8em;
+  outline: none;
+  border: none;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.info-user {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.info-user > h4 {
+  font-size: 1.8em;
+  text-align: center;
+}
+
+.info-user > h3 {
+  letter-spacing: 3px;
+  font-weight: 200;
+  margin-bottom: 5%;
+  font-size: 1.6em;
+  text-align: center;
+}
+
+#user-profile-image {
+  user-select: none;
+  width: 50%;
+  border: black 2px solid;
+}

@@ -5,7 +5,11 @@ import gallery from '../gallery';
 
 function ArtProvider({ children }) {
   const [galleryObj, setGalleryObj] = useState(gallery);
-  const context = useMemo(() => ({ gallery, galleryObj, setGalleryObj }), []);
+  const context = useMemo(() => ({
+    gallery,
+    galleryObj,
+    setGalleryObj,
+  }));
 
   return (
     <ArtContext.Provider value={context}>

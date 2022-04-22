@@ -15,11 +15,13 @@
   gap: 0.5%;
   justify-content: space-between;
 }
+
 .card-image {
   display: flex;
   min-width: 33%;
   flex-direction: column;
 }
+
 .card-image > img {
   width: 100%;
   object-fit: cover;
