@@ -28,7 +28,7 @@ function Profile() {
 
   return (
     <>
-      <Header />
+      <Header gallery={[]} setGallery={() => null} />
       <main className="main-profile">
         <div className="container-profile">
           {isEdit
