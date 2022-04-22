@@ -4,6 +4,8 @@ import Home from './Pages/Home';
 import Login from './Pages/Login';
 import Profile from './Pages/Profile';
 import ArtProvider from './context/ArtProvider';
+import './css/PhoneVersion.css';
+import './css/MediumVersion.css';
 
 function App() {
   return (

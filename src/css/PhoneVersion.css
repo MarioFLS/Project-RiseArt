@@ -1,0 +1,73 @@
+@media (max-width: 300px) {
+  body {
+    font-size: 0.8em;
+  }
+
+  .btn-user {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 600px)
+{
+  .form-login {
+    width: 80vw;
+  }
+
+  .icon-login {
+    width: 40%;
+  }
+
+  .container-inputs > input {
+    font-size: 1.5em;
+    width: 70%;
+    height: 60px;
+  }
+
+  #logotipo {
+    width: 55px;
+  }
+
+  .card-image {
+    min-width: 32%;
+    max-width: 60%;
+  }
+
+  .card-image > img {
+    height: calc(80px * 2 + 10px * 6);
+  }
+
+  .section-profile {
+    width: 70vw;
+  }
+
+  .info-user > h4 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  
+  .info-user > h3 {
+    font-size: 1.4em;
+  }
+
+  .btn-user {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 800px)
+{
+  .form-login {
+    width: 80vw;
+  }
+
+  .icon-login {
+    width: 50%;
+  }
+
+  .container-inputs > input {
+    font-size: 2em;
+    width: 70%;
+    height: 70px;
+  }
+}

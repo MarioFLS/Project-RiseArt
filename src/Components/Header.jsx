@@ -1,14 +1,12 @@
 import PropTypes from 'prop-types';
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import ArtContext from '../context/ArtContext';
 import { saveArt } from '../service/saveStorage';
 import icon from '../image/icon.png';
 import '../css/Header.css';
 
 function Header({ gallery, setGallery }) {
   const getUser = JSON.parse(localStorage.getItem('user'));
-  const { setInputFilter, inputFilter } = useContext(ArtContext);
 
   const addArt = (event) => {
     event.preventDefault();
@@ -28,16 +26,6 @@ function Header({ gallery, setGallery }) {
       <Link to="/home">
         <img src={icon} alt="Icone da Marca" id="logotipo" />
       </Link>
-
-      <label htmlFor="filter-arts" id="label-filter">
-        <i className="material-icons">search</i>
-        <input
-          type="text"
-          id="filter-arts"
-          onChange={({ target }) => setInputFilter(target.value)}
-          value={inputFilter}
-        />
-      </label>
 
       <div className="send-img">
         <Link to="/profile">

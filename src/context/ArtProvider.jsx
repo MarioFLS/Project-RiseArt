@@ -5,13 +5,10 @@ import gallery from '../gallery';
 
 function ArtProvider({ children }) {
   const [galleryObj, setGalleryObj] = useState(gallery);
-  const [inputFilter, setInputFilter] = useState('');
   const context = useMemo(() => ({
     gallery,
     galleryObj,
     setGalleryObj,
-    setInputFilter,
-    inputFilter,
   }));
 
   return (
