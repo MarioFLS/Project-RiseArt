@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { saveUser } from '../service/saveStorage';
-import '../css/Profile.css';
 import ProfileEdit from '../Components/ProfileEdit';
 import ProfileView from '../Components/ProfileView';
+import '../css/Profile.css';
+import Header from '../Components/Header';
 
 function Profile() {
   const getUser = JSON.parse(localStorage.getItem('user'));
@@ -26,27 +27,30 @@ function Profile() {
   };
 
   return (
-    <main>
-      <h2>Tela De Perfil</h2>
-      <div>
-        {isEdit
-          ? (
-            <ProfileEdit
-              name={{ nameUser, setNameUser }}
-              email={{ emailUser, setEmailUser }}
-              image={{ profileImage, setProfileImage }}
-            />
-          )
-          : <ProfileView />}
-        <button
-          disabled={isDisabled}
-          onClick={editProfileItems}
-          type="button"
-        >
-          Editar Perfil
-        </button>
-      </div>
-    </main>
+    <>
+      <Header />
+      <main className="main-profile">
+        <div className="container-profile">
+          {isEdit
+            ? (
+              <ProfileEdit
+                name={{ nameUser, setNameUser }}
+                email={{ emailUser, setEmailUser }}
+                image={{ profileImage, setProfileImage }}
+              />
+            )
+            : <ProfileView />}
+          <button
+            className="btn-user"
+            disabled={isDisabled}
+            onClick={editProfileItems}
+            type="button"
+          >
+            Editar Perfil
+          </button>
+        </div>
+      </main>
+    </>
   );
 }
 

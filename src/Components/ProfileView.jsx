@@ -6,12 +6,20 @@ function ProfileView() {
     <section className="section-profile">
 
       <img
-        id="image-user"
+        id="user-profile-image"
         src={getUser.imgProfile}
         alt="Imagem do usuário"
       />
-      <h4>{getUser.name}</h4>
-      <h4>{getUser.email}</h4>
+      <div className="info-user">
+        <h3>Nome do Usuário</h3>
+        <h4>{getUser.name}</h4>
+      </div>
+
+      <div className="info-user">
+        <h3>Email do Usuário</h3>
+        <h4>{getUser.email}</h4>
+      </div>
+
     </section>
   );
 }

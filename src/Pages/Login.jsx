@@ -44,7 +44,7 @@ function Login() {
         </div>
 
         <button
-          id="btn-login"
+          className="btn-user"
           type="submit"
           disabled={verifyUser()}
           onClick={handleClickLogin}

@@ -18,7 +18,6 @@ function ProfileEdit({ name, email, image }) {
   };
   return (
     <section className="section-profile">
-
       <label htmlFor="upload-img" className="label-edit-profile">
         <input
           type="file"
@@ -27,7 +26,7 @@ function ProfileEdit({ name, email, image }) {
           onChange={addArt}
         />
         <img
-          id="image-user"
+          id="user-profile-image"
           src={profileImage}
           alt="Imagem do usuário"
         />

@@ -41,7 +41,7 @@
   margin: 0 auto;
 }
 
-#btn-login {
+.btn-user {
   border-radius: 10px;
   cursor: pointer;
   color: white;
@@ -55,11 +55,11 @@
   letter-spacing: 5px;
 }
 
-#btn-login:hover {
+.btn-user:hover {
   background: rgb(13, 77, 4);
   background: linear-gradient(228deg, rgb(80, 175, 67) 60%, rgb(41, 145, 51) 80%, rgb(47, 156, 41) 100%);
 }
 
-#btn-login:disabled {
-  opacity: 0.7;
+.btn-user:disabled {
+  opacity: 0.5;
 }
