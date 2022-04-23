@@ -11,7 +11,6 @@ function Header({ gallery, setGallery }) {
   const getUser = JSON.parse(localStorage.getItem('user'));
 
   const addArt = (event) => {
-    event.preventDefault();
     const imageFile = event.target.files[0];
     const reader = new FileReader();
     reader.onload = () => {

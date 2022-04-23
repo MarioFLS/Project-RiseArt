@@ -17,6 +17,7 @@
 }
 
 .card-image {
+  position: relative;
   display: flex;
   min-width: 33%;
   max-width: 60%;
@@ -34,4 +35,19 @@
   user-select: none;
   font-size: 4em;
   margin: 20px 0;
+}
+
+
+.delete-item {
+  font-size: 4em;
+  position:absolute;
+  z-index:1;
+  top: 3%;
+  left:85%;
+  cursor: pointer;
+}
+
+.btn-delete {
+  color: none;
+  border: none;
 }
