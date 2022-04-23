@@ -11,8 +11,8 @@ function Home() {
 
   const itemArr = (index) => Math.floor(index / 3);
 
+  const getArts = JSON.parse(localStorage.getItem('arts'));
   useEffect(() => {
-    const getArts = JSON.parse(localStorage.getItem('arts'));
     if (getArts) {
       setGallery([...gallery, ...getArts]);
     }
@@ -26,14 +26,17 @@ function Home() {
         galleryArr[itemArr(index)] = [...galleryArr[itemArr(index)], galleryItens];
       });
     setGalleryonScreen(galleryArr.reverse());
-  }, [setGalleryonScreen, gallery, setGallery, inputFilter]);
+  }, [setGalleryonScreen, gallery, setGallery, inputFilter, getArts]);
 
   return (
     <>
       <Header gallery={gallery} setGallery={setGallery} />
       <main className="main-container">
-        <h1 id="Title-page">Home</h1>
-        <ListGallery onScreen={galleryonScreen} />
+        <h1 id="Title-page">Galeria</h1>
+        <ListGallery
+          onScreen={galleryonScreen}
+          setGallery={setGallery}
+        />
       </main>
     </>
   );

@@ -1,8 +1,20 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-function ListGallery({ onScreen }) {
+function ListGallery({ onScreen, setGallery }) {
+  const getArts = JSON.parse(localStorage.getItem('arts'));
+
   const itemArr = (index) => Math.floor(index / 3);
+
+  const deleteArt = (artId) => {
+    localStorage.setItem(
+      'arts',
+      JSON.stringify(
+        getArts.filter(({ id }) => id !== artId),
+      ),
+    );
+    return setGallery((preves) => (preves.filter(({ id }) => id !== artId)));
+  };
   return (
     <div className="cards-main-container">
       {onScreen.map((item, index) => (
@@ -17,7 +29,18 @@ function ListGallery({ onScreen }) {
                 key={id}
                 className="card-image"
               >
+                {getArts?.some((art) => art.id === id)
+                && (
+                <button
+                  type="button"
+                  className="btn-delete"
+                  onClick={() => deleteArt(id)}
+                >
+                  <i className="material-icons delete-item">delete</i>
+                </button>
+                )}
                 <img
+                  className="image-onScreen"
                   src={image}
                   data-testid={`images-${indexImg}`}
                   alt={`Imagem de ${name}`}
@@ -31,7 +54,8 @@ function ListGallery({ onScreen }) {
 }
 
 ListGallery.propTypes = {
-  onScreen: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.objectOf)).isRequired,
+  onScreen: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.any)).isRequired,
+  setGallery: PropTypes.func.isRequired,
 };
 
 export default ListGallery;

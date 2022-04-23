@@ -1,17 +1,18 @@
-@media (max-width: 300px) {
+@media (max-width: 400px) {
   body {
     font-size: 0.8em;
   }
 
   .btn-user {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 }
 
 @media (max-width: 600px)
 {
   .form-login {
-    width: 80vw;
+    width: 85vw;
+    border-radius: 2%;
   }
 
   .icon-login {
@@ -39,7 +40,7 @@
   }
 
   .card-image > img {
-    height: calc(80px * 2 + 10px * 6);
+    height: calc(60px * 2 + 10px * 2);
   }
 
   .section-profile {
@@ -90,19 +91,46 @@
   }
 }
 
-@media (max-width: 800px)
-{
+@media (min-width: 500px) {
   .form-login {
-    width: 80vw;
+    width: 70vw;
   }
 
   .icon-login {
-    width: 50%;
+    width: 35%;
   }
 
   .container-inputs > input {
-    font-size: 2em;
+    font-size: 1.5em;
     width: 70%;
-    height: 70px;
+    height: 50px;
   }
+
+  .btn-user {
+    width: 50%;
+    font-size: 2.5em;
+  }
+}
+
+@media (min-width: 800px)
+{
+  .form-login {
+    width: 60vw;
+  }
+
+  .icon-login {
+    width: 25%;
+  }
+
+  .container-inputs > input {
+    font-size: 1.5em;
+    width: 50%;
+    height: 50px;
+  }
+
+  .btn-user {
+    width: 40%;
+    font-size: 2em;
+  }
+  
 }
