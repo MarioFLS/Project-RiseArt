@@ -32,7 +32,7 @@ function Home() {
     <>
       <Header gallery={gallery} setGallery={setGallery} />
       <main className="main-container">
-        <h1 id="Title-page">Home</h1>
+        <h1 id="Title-page">Galeria</h1>
         <ListGallery
           onScreen={galleryonScreen}
           setGallery={setGallery}

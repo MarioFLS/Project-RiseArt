@@ -20,7 +20,7 @@ describe('Teste Página Home', () => {
   });
 
   it('Texto Esta Presente na tela', () => {
-    const textHome = screen.getByText(/home/i);
+    const textHome = screen.getByText(/galeria/i);
     expect(textHome).toBeInTheDocument();
   });
 
