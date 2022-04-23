@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-function ListGallery({ onScreen }) {
+function ListGallery({ onScreen, setGallery }) {
   const getArts = JSON.parse(localStorage.getItem('arts'));
 
   const itemArr = (index) => Math.floor(index / 3);
@@ -13,6 +13,7 @@ function ListGallery({ onScreen }) {
         getArts.filter(({ id }) => id !== artId),
       ),
     );
+    return setGallery((preves) => (preves.filter(({ id }) => id !== artId)));
   };
   return (
     <div className="cards-main-container">
@@ -54,6 +55,7 @@ function ListGallery({ onScreen }) {
 
 ListGallery.propTypes = {
   onScreen: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.any)).isRequired,
+  setGallery: PropTypes.func.isRequired,
 };
 
 export default ListGallery;

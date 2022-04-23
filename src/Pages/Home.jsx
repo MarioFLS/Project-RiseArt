@@ -35,6 +35,7 @@ function Home() {
         <h1 id="Title-page">Home</h1>
         <ListGallery
           onScreen={galleryonScreen}
+          setGallery={setGallery}
         />
       </main>
     </>
