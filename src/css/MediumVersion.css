@@ -1,5 +1,63 @@
+@media (min-width: 768px) and (max-width: 960px) {
+  .section-profile {
+    margin-top: 10%;
+    display: flex;
+    border-radius: 10%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgba(8, 8, 8, 0.795);
+    height: 70vh;
+    width: 60vw;
+  }
+
+  .info-user > h4 {
+    font-size: 2em;
+    text-align: center;
+  }
+  
+  .info-user > h3 {
+    letter-spacing: 2.5px;
+    font-weight: 200;
+    margin-bottom: 5%;
+    font-size: 2em;
+    text-align: center;
+  }
+  
+  #user-profile-image {
+    user-select: none;
+    width: 60%;
+  }
+}
+
 @media (max-width: 1400px) {
   #logotipo {
     width: 50px;
+  }
+
+  .info-user > h4 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  
+  .info-user > h3 {
+    letter-spacing: 2.5px;
+    font-weight: 200;
+    margin-bottom: 5%;
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .send-img-profile > a{
+    font-size: 1.5em;
+  }
+  
+  .send-img-profile > p {
+    font-size: 2em;
+  }
+
+  #user-profile-image {
+    user-select: none;
+    width: 180px;
   }
 }

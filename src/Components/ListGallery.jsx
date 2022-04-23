@@ -17,6 +17,7 @@ function ListGallery({ onScreen }) {
                 key={id}
                 className="card-image"
               >
+                {id}
                 <img
                   src={image}
                   data-testid={`images-${indexImg}`}

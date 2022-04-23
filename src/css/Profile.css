@@ -30,7 +30,7 @@
   border-radius: 10%;
   align-items: center;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   background-color: rgba(8, 8, 8, 0.795);
   height: 70vh;
   width: 32vw;
@@ -40,7 +40,7 @@
   border-radius: 10px;
   width: 55%;
   height: 60px;
-  font-size: 1.8em;
+  font-size: 1.3em;
   outline: none;
   border: none;
   text-align: center;
@@ -52,20 +52,19 @@
 }
 
 .info-user > h4 {
-  font-size: 1.8em;
+  font-size: 2em;
   text-align: center;
 }
 
 .info-user > h3 {
-  letter-spacing: 3px;
+  letter-spacing: 2.5px;
   font-weight: 200;
   margin-bottom: 5%;
-  font-size: 1.6em;
+  font-size: 2em;
   text-align: center;
 }
 
 #user-profile-image {
   user-select: none;
-  width: 50%;
-  border: black 2px solid;
+  width: 260px;
 }
