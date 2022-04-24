@@ -14,6 +14,9 @@ Essa Aplicação Permite:
 
 > Desenvolvida utilizando: React, JavaScript, ContextApi, ReactHooks, Jest, React Testing Library, HTML e CSS.
 
+## Imagens
+
+> Todas as imagens foram tiradas do site [Pinterest](https://br.pinterest.com/)
 
 ## Como utilizar
 
@@ -28,8 +31,8 @@ Utilize o comando: `cd Project-RiseArt`
 
 ## Alguns Erros
 
-Infelizmente nem todos os testes foram devidamente feitos. A página de Perfil não possui testes. E a página principal não está completamente coberta por testes. 
+Infelizmente nem todos os testes foram devidamente feitos. A página de Perfil não possui testes. A página principal não está completamente coberta por testes. 
 
 ## GIF
 
-![git-trivia](https://user-images.githubusercontent.com/93008789/159812561-7f044093-8f16-409a-b3b5-ca2527718bda.gif)
+![riseArt](https://user-images.githubusercontent.com/93008789/164994821-cddee675-aaba-4eaf-842d-4281bc5c259d.gif)
