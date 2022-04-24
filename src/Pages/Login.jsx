@@ -32,7 +32,7 @@ function Login() {
             onChange={({ target }) => setName(target.value)}
           />
           <input
-            type="text"
+            type="email"
             placeholder="Digite seu Email"
             onChange={({ target }) => setEmail(target.value)}
           />

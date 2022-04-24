@@ -8,6 +8,25 @@
   }
 }
 
+@media (max-height: 600px) {
+  .icon-login {
+    height: 40%;
+    width: 10%;
+  }
+
+  .container-inputs {
+    width: 100%;
+    gap: 10px;
+  }
+
+
+  .container-inputs > input {
+    font-size: 1.5em;
+    border: solid black 2px;
+  }
+  
+}
+
 @media (max-width: 600px)
 {
   .form-login {
@@ -133,4 +152,29 @@
     font-size: 2em;
   }
   
+}
+
+@media (max-width: 700px) and (orientation: landscape) {
+  .icon-login {
+    height: 30%;
+    width: 20%;
+  }
+
+  .form-login {
+    height: 95vh;
+    width: 60vw;
+  }
+
+  .container-inputs > input {
+    border-radius: 10px;
+    width: 60%;
+    height: 30px;
+    font-size: 1em;
+  }
+
+  .btn-user {
+    font-size: 1.5em;
+    padding: 5px;
+    width: 30%;
+  }
 }
