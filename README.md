@@ -1,75 +1,35 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+# ***Projeto RiseArt***
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Descrição
+RiseArt busca simular um site onde você possa postar suas artes, seja desenho, foto ou até mesmo uma arte que você goste!
+ 
+Essa Aplicação Permite:
 
-In the project directory, you can run:
+-  Ter uma experiência de estar postando seus trabalhos artísticos. Parecido com sites como Pinterest;
+-  Adição e exclusão de qualquer foto em seu computador ou telefone;
+-  Edição do seu perfil, incluindo sua própria foto.
 
-### `npm start`
+## Tecnologias Usadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+> Desenvolvida utilizando: React, JavaScript, ContextApi, ReactHooks, Jest, React Testing Library, HTML e CSS.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Como utilizar
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> Entre na pasta do arquivo
+Utilize o comando: `cd Project-RiseArt`
 
-### `npm run build`
+> Instale as dependências: `npm install`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Entrando Direto na Aplicação
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> https://project-rise-art.vercel.app/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Alguns Erros
 
-### `npm run eject`
+Infelizmente nem todos os testes foram devidamente feitos. A página de Perfil não possui testes. E a página principal não está completamente coberta por testes. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## GIF
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# Project-RiseArt
-O RiseArt simula internamente de forma simplificada um site de trabalhos artísticos ou imagens do seu gosto. Em que você pode fazer upload dos seus próprios trabalhos!
->>>>>>> 604977a5c6c00fe048fbc1ccde248529ec3ebd14
+![git-trivia](https://user-images.githubusercontent.com/93008789/159812561-7f044093-8f16-409a-b3b5-ca2527718bda.gif)
