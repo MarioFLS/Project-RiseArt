@@ -20,7 +20,7 @@
 
 .icon-login {
   user-select: none;
-  width: 22%;
+  max-width: 20%;
 }
 
 .container-inputs {
